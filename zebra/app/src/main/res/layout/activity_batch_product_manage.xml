@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.product.BatchProductManageActivity"
+    tools:ignore="ButtonStyle,HardcodedText">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/colorMain"
+        android:elevation="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:contentDescription="@string/back"
+            android:padding="10dp"
+            android:src="@drawable/back"
+            />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="60dp"
+            android:layout_marginStart="60dp"
+            android:drawableEnd="@drawable/into0_down"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:singleLine="true"
+            android:text="全部分类"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/tv_clear_selected"
+            android:layout_width="@dimen/qb_px_60"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:gravity="center"
+            android:text="全不选"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smart_refresh"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/ll_menu_update"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_top">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_product"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_menu_update"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:elevation="3dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <Button
+            android:id="@+id/btn_shangjia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorTm"
+            android:text="上架"
+            android:textColor="@color/color_700"
+            />
+
+        <Button
+            android:id="@+id/btn_xiajia"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorTm"
+            android:text="下架"
+            android:textColor="@color/color_700"/>
+
+        <Button
+            android:id="@+id/btn_update_stock"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorTm"
+            android:text="修改库存"
+            android:textColor="@color/color_700"/>
+
+        <Button
+            android:id="@+id/btn_more"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorTm"
+            android:text="更多操作"
+            android:textColor="@color/color_700"/>
+
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/layout_classification"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clickable="true"
+        android:elevation="4dp"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rl_top">
+
+        <View
+            android:id="@+id/view_gone_bottom"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ll_gone_top"
+            android:background="@color/color_700"
+            android:layout_width="0dp"
+            android:layout_height="0dp"/>
+
+        <LinearLayout
+            android:id="@+id/ll_gone_top"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="180dp"
+            android:background="@color/white"
+            android:baselineAligned="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:id="@+id/ll_left"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:elevation="4dp"
+                android:orientation="vertical"
+                >
+
+                <CheckBox
+                    android:id="@+id/cb_goods_all"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/selector_checkbox_bg0"
+                    android:button="@null"
+                    android:checked="true"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:text="全部分类"
+                    android:textColor="@color/selector_radio_text0"
+                    />
+
+                <CheckBox
+                    android:id="@+id/cb_goods_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:background="@drawable/selector_checkbox_bg0"
+                    android:button="@null"
+                    android:elevation="3dp"
+                    android:gravity="center"
+                    android:text="未分类"
+                    android:textColor="@color/selector_radio_text0"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview0"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_weight="1"
+                    android:elevation="5dp"
+                    tools:ignore="NestedWeights"/>
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/fl_right"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="180dp"
+                android:layout_marginStart="3dp"
+                android:layout_weight="3.3"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="二级分类"
+                    android:textSize="12sp"/>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

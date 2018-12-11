@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFg"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".activities.me.StoresActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/common_my_toolbar"/>
+
+    <LinearLayout
+        android:elevation="5dp"
+        android:id="@+id/ll_top0"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <com.gcssloop.widget.RCImageView
+            android:id="@+id/rciv_logo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/img_default"
+            app:round_as_circle="true"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="账号XXXX welcome"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+
+            <EditText
+                android:layout_marginTop="3dp"
+                android:id="@+id/et_search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="50dp"
+                android:background="@drawable/shape_corners6_colorfg"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/search"
+                android:gravity="center_vertical"
+                android:hint="@string/search"
+                android:imeOptions="actionSearch"
+                android:inputType="none"
+                android:padding="5dp"
+                android:singleLine="true"
+                android:textSize="14sp"
+                tools:ignore="RtlCompat"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:textColor="@color/black"
+        android:layout_marginTop="20dp"
+        android:id="@+id/tv_tip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp"
+        android:text="全部门店"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_top0"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_tip"/>
+
+</android.support.constraint.ConstraintLayout>

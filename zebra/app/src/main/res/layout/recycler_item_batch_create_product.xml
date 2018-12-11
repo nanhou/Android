@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    tools:ignore="ContentDescription,HardcodedText">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="@dimen/item_img_width"
+        android:layout_height="@dimen/item_img_width"
+        android:layout_margin="15dp"
+        android:src="@drawable/img_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/iv_into"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/into0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/iv_bq"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintRight_toLeftOf="@id/iv_into"
+        android:src="@drawable/icon_standard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:layout_marginEnd="15dp"
+        android:id="@+id/tv_name"
+        app:layout_constraintLeft_toRightOf="@id/iv_img"
+        app:layout_constraintBottom_toTopOf="@id/tv_price"
+        app:layout_constraintRight_toLeftOf="@id/iv_bq"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="15dp"
+        android:text="name"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:textSize="17sp"
+        android:id="@+id/tv_price"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        android:textColor="@color/colorRed"
+        android:text="价格：¥ 0.00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_update"
+        android:drawablePadding="5dp"
+        android:gravity="center_vertical"
+        android:drawableEnd="@drawable/into0"
+        android:text="调整"
+        android:layout_marginStart="15dp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_price"
+        app:layout_constraintLeft_toRightOf="@id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>

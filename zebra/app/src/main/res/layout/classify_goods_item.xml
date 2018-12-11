@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    tools:ignore="RtlSymmetry,UseCompoundDrawables">
+
+    <ImageView
+        android:layout_centerVertical="true"
+        android:id="@+id/iv_img"
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_marginStart="5dp"
+        android:src="@drawable/shape_corners20_colormain"
+        tools:ignore="ContentDescription"/>
+
+    <TextView
+        android:textSize="12sp"
+        android:layout_centerInParent="true"
+        android:id="@+id/tv_classify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="13dp"
+        android:layout_marginStart="13dp"
+        android:text="@string/defalut"
+        android:textColor="@color/black"
+        />
+
+</RelativeLayout>

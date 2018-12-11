@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFg"
+    tools:context=".activities.product.creategoods.SellingTimeActivity"
+    tools:ignore="HardcodedText,RtlSymmetry">
+
+    <include
+        android:id="@+id/view_top"
+        layout="@layout/common_my_toolbar"/>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/rg_sell_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/rb0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:checked="true"
+                    android:drawableEnd="@drawable/selecor_right"
+                    android:padding="15dp"
+                    android:text="全时段售卖"
+                    android:textColor="@color/black"/>
+
+                <RadioButton
+                    android:id="@+id/rb1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:button="@null"
+                    android:drawableEnd="@drawable/selecor_right"
+                    android:padding="15dp"
+                    android:text="限时售卖"
+                    android:textColor="@color/black"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ll_limit_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_start_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="开始日期"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tv_start_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:hint="请选择"
+                        android:padding="15dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_end_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp"
+                        android:text="结束日期"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:id="@+id/tv_end_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:hint="请选择"
+                        android:padding="15dp"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/white"
+                    android:padding="15dp"
+                    android:text="售卖日"
+                    android:textColor="@color/black"/>
+
+                <android.support.constraint.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingBottom="10dp"
+                    android:paddingEnd="15dp"
+                    android:paddingStart="15dp">
+
+                    <CheckBox
+                        android:id="@+id/check0"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_radio0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="周一"
+                        android:textColor="@color/selector_radio_text1"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toLeftOf="@id/check1"/>
+
+                    <CheckBox
+                        android:id="@+id/check1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/selector_radio0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="周二"
+                        android:textColor="@color/selector_radio_text1"
+                        app:layout_constraintLeft_toRightOf="@id/check0"
+                        app:layout_constraintRight_toLeftOf="@id/check2"/>
+
+                    <CheckBox
+                        android:id="@+id/check2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/selector_radio0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="周三"
+                        android:textColor="@color/selector_radio_text1"
+                        app:layout_constraintLeft_toRightOf="@id/check1"
+                        app:layout_constraintRight_toLeftOf="@id/check3"/>
+
+                    <CheckBox
+                        android:id="@+id/check3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/selector_radio0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="周四"
+                        android:textColor="@color/selector_radio_text1"
+                        app:layout_constraintLeft_toRightOf="@id/check2"
+                        app:layout_constraintRight_toRightOf="parent"/>
+
+                    <CheckBox
+                        android:id="@+id/check4"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/selector_radio0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="周五"
+                        android:textColor="@color/selector_radio_text1"
+                        app:layout_constraintLeft_toLeftOf="@id/check0"
+                        app:layout_constraintRight_toRightOf="@id/check0"
+                        app:layout_constraintTop_toBottomOf="@id/check0"/>
+
+                    <CheckBox
+                        android:id="@+id/check5"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/selector_radio0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="周六"
+                        android:textColor="@color/selector_radio_text1"
+                        app:layout_constraintLeft_toRightOf="@id/check4"
+                        app:layout_constraintRight_toRightOf="@id/check1"
+                        app:layout_constraintTop_toTopOf="@id/check4"/>
+
+                    <CheckBox
+                        android:id="@+id/check6"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:background="@drawable/selector_radio0"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="周天"
+                        android:textColor="@color/selector_radio_text1"
+                        app:layout_constraintLeft_toRightOf="@id/check5"
+                        app:layout_constraintRight_toRightOf="@id/check2"
+                        app:layout_constraintTop_toTopOf="@id/check4"/>
+                </android.support.constraint.ConstraintLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_sell_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rb2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableEnd="@drawable/selecor_right"
+                        android:padding="15dp"
+                        android:text="全天售卖"/>
+
+                    <RadioButton
+                        android:id="@+id/rb3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:drawableEnd="@drawable/selecor_right"
+                        android:padding="15dp"
+                        android:text="限时段售卖"/>
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:id="@+id/ll_limit_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_marginTop="@dimen/qb_px_10"
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/tv_add_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@color/white"
+                        android:drawablePadding="5dp"
+                        android:drawableStart="@drawable/circle_add"
+                        android:padding="15dp"
+                        android:text="添加时间段(时间段起始大于结束、不可交叉)"
+                        android:textColor="@color/colorMain"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    
+</android.support.constraint.ConstraintLayout>

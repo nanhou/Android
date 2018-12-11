@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="20dp"
+    tools:ignore="SmallSp,HardcodedText,ContentDescription">
+
+    <ImageView
+        android:id="@+id/iv_select"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/batch_sele"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="20dp"
+        android:src="@drawable/img_default"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/iv_select"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_pay_status"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/color_700"
+        android:gravity="center"
+        android:text="已下架"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="@id/iv_img"
+        app:layout_constraintTop_toTopOf="@id/iv_img"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="行于人"
+        app:layout_constraintLeft_toRightOf="@id/iv_img"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll_platforms"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name">
+
+        <TextView
+            android:id="@+id/tv_platfrom0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_stroke3_color700"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="2dp"
+            android:text="京东"
+            android:textColor="@color/color_700"
+            android:textSize="10sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_platfrom1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/shape_stroke3_color700"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="2dp"
+            android:text="美团"
+            android:textColor="@color/color_700"
+            android:textSize="10sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_platfrom2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/shape_stroke3_color700"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="2dp"
+            android:text="饿了么"
+            android:textColor="@color/color_700"
+            android:textSize="10sp"
+            />
+        <!--android:background="@drawable/selector_platform_enable"-->
+        <!--android:textColor="@color/selector_radio_text3"-->
+        <TextView
+            android:id="@+id/tv_platfrom3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/shape_stroke3_color700"
+            android:gravity="center"
+            android:paddingBottom="2dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="2dp"
+            android:text="饿百"
+            android:textColor="@color/color_700"
+            android:textSize="10sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_price_inventory"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@id/iv_img"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="¥ 55.44"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_inventory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="月销:323 | 库存:21"
+            android:textSize="10sp"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

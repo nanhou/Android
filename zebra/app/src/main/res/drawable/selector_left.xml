@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/shape_left_corners3_colorwhite" android:state_checked="true"/>
+
+    <item android:drawable="@drawable/shape_left_conrners3_colormain"/>
+
+</selector>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    tools:ignore="HardcodedText"
+    android:padding="10dp">
+
+    <TextView
+        android:singleLine="true"
+        android:id="@+id/tv_goods_name"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="黄瓜 5/根"
+        />
+
+    <com.vondear.rxtools.view.roundprogressbar.RxTextRoundProgressBar
+        android:id="@+id/rx_round_pd15"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="25dp"
+        android:layout_margin="5dp"
+        app:rcMax="100"
+        app:rcSecondaryProgress="100"
+        app:rcSecondaryProgressColor="@color/white"
+        app:rcProgress="80"
+        app:rcProgressColor="@color/colorGreen"
+        app:rcRadius="15dp"
+        app:rcTextProgress="RxTools"
+        app:rcTextProgressColor="@color/black"
+        app:rcTextProgressMargin="10dp"
+        app:rcTextProgressSize="10sp"/>
+
+</LinearLayout>

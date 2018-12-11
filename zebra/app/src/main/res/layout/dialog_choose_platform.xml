@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="@dimen/qb_px_280"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_conrners6_white"
+              android:orientation="vertical"
+              tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/tv_platform_all"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="全部平台"
+        android:textColor="@color/colorMain"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:background="@color/color_f6"/>
+
+    <TextView
+        android:id="@+id/tv_platform_jd"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="京东到家"
+        android:textColor="@color/colorMain"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:background="@color/color_f6"/>
+
+    <TextView
+        android:id="@+id/tv_platform_mt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="美团外卖"
+        android:textColor="@color/colorMain"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:background="@color/color_f6"/>
+
+    <TextView
+        android:id="@+id/tv_platform_eleme"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="饿了么"
+        android:textColor="@color/colorMain"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:background="@color/color_f6"/>
+
+    <TextView
+        android:id="@+id/tv_platform_ebai"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="饿百"
+        android:textColor="@color/colorMain"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:background="@color/color_f6"/>
+
+    <TextView
+        android:id="@+id/tv_cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="取消"/>
+
+</LinearLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFg"
+    android:orientation="vertical"
+    tools:context=".activities.orders.OderOfDayActivity"
+    tools:ignore="HardcodedText,ContentDescription">
+
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorMain"
+        android:elevation="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/back"
+            android:paddingEnd="15dp"
+            android:paddingStart="15dp"
+            android:src="@drawable/back"
+            />
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/selector_left"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:text="今天"
+                android:textColor="@color/selector_radio_text2"
+                />
+
+            <RadioButton
+                android:id="@+id/rb1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/seletor_right"
+                android:button="@null"
+                android:gravity="center"
+                android:text="选择日期"
+                android:textColor="@color/selector_radio_text2"
+                />
+
+        </RadioGroup>
+
+        <ImageView
+            android:id="@+id/iv_screening"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toStartOf="@id/iv_search"
+            android:contentDescription="@string/back"
+            android:paddingEnd="@dimen/qb_px_10"
+            android:paddingStart="@dimen/qb_px_10"
+            android:src="@drawable/screening_white"
+            />
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:paddingEnd="@dimen/qb_px_10"
+            android:paddingStart="@dimen/qb_px_10"
+            android:src="@drawable/search"
+            />
+
+    </RelativeLayout>
+
+    <include layout="@layout/comm_tab_viewpager"/>
+
+</LinearLayout>

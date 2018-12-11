@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <cn.jinxiit.zebra.views.ObservableScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorFg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/tab_padding_top_button"
+                android:paddingTop="@dimen/tab_padding_top_button">
+
+                <View
+                    android:layout_width="3dp"
+                    android:layout_height="18dp"
+                    android:background="@color/colorMain"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"
+                    android:text="流量环比分析"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="5dp"
+                    android:drawableRight="@drawable/question_mark_gray"
+                    android:gravity="center_vertical"
+                    android:hint="指标详情"
+                    android:paddingEnd="10dp"/>
+            </LinearLayout>
+
+            <include android:id="@+id/view_traffic" layout="@layout/layout_trafficdata"/>
+
+            <LinearLayout
+                android:id="@+id/ll_analysis_traffic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/tab_margin_top"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/tab_padding_top_button"
+                    android:paddingTop="@dimen/tab_padding_top_button">
+
+                    <View
+                        android:layout_width="3dp"
+                        android:layout_height="18dp"
+                        android:background="@color/colorMain"/>
+
+                    <TextView
+                        android:id="@+id/tv_traffic_tip"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:text="近7日 顾客分析"
+                        android:textColor="@color/black"/>
+
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="5dp"
+                        android:drawableRight="@drawable/question_mark_gray"
+                        android:gravity="center_vertical"
+                        android:hint="指标详情"
+                        android:paddingEnd="10dp"/>
+                </LinearLayout>
+
+                <include
+                    android:id="@+id/view_chart0"
+                    layout="@layout/layout_commom_chart"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </cn.jinxiit.zebra.views.ObservableScrollView>
+
+</android.support.constraint.ConstraintLayout>

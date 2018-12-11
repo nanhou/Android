@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:ignore="UselessParent,HardcodedText,RtlSymmetry,TextFields">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="属性名称："
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorTm"
+            android:hint="请填写规格名称"
+            android:paddingEnd="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dp"
+        android:paddingEnd="10dp"
+        android:paddingStart="10dp"
+        android:paddingTop="15dp"
+        >
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="属性标签："
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:id="@+id/ll_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_tip0"
+                    android:imeOptions="actionNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_stroke20_gray"
+                    android:gravity="center"
+                    android:hint="输入属性"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/et_tip1"
+                    android:imeOptions="actionNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/shape_stroke20_gray"
+                    android:gravity="center"
+                    android:hint="输入属性"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="12sp"/>
+
+                <EditText
+                    android:id="@+id/et_tip2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:background="@drawable/shape_stroke20_gray"
+                    android:gravity="center"
+                    android:hint="输入属性"
+                    android:padding="5dp"
+                    android:singleLine="true"
+                    android:textSize="12sp"/>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:text="删除该属性"
+        android:textColor="@color/colorRed"/>
+
+</LinearLayout>

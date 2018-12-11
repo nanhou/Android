@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@android:color/background_light"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                tools:ignore="ContentDescription,HardcodedText,RelativeOverlap">
+
+    <ImageView
+        android:id="@+id/iv_tip"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/shape_corners20_colormain"
+        android:layout_centerVertical="true"
+        android:layout_width="10dp"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/iv_tip"
+        android:id="@+id/item1_sdtrv_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        tools:text="TextView"
+        />
+
+    <ImageView
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@id/btn_tuo"
+        android:padding="10dp"
+        android:src="@drawable/category_sort"
+        />
+
+    <Button
+        android:id="@+id/btn_tuo"
+        android:layout_width="@dimen/qb_px_60"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:background="@color/colorTm"
+        android:text="@string/edit"
+        android:textColor="@color/colorMain"/>
+
+</RelativeLayout>

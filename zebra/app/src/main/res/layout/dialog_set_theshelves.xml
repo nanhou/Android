@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="@dimen/qb_px_280"
+              android:layout_height="wrap_content"
+              android:background="@drawable/shape_conrners6_white"
+              android:orientation="vertical"
+              tools:ignore="HardcodedText">
+
+    <RadioGroup
+        android:id="@+id/rg_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/rb_automatic_shelves"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="自动上架"
+            android:textColor="@color/selector_radio_text0"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#D0D0D0"/>
+
+        <RadioButton
+            android:id="@+id/rb_manual_shelves"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:button="@null"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="指定时间"
+            android:textColor="@color/selector_radio_text0"/>
+
+    </RadioGroup>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp">
+
+        <TextView
+            android:id="@+id/tv_automatic_shelves"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="是否在营业时间结束后自动补满库存上架？"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:visibility="gone"
+            />
+
+        <TextView
+            android:id="@+id/tv_datetime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:drawablePadding="5dp"
+            android:drawableStart="@drawable/clock"
+            android:gravity="center"
+            android:hint="点击选择上架时刻"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#D0D0D0"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <Button
+            android:id="@+id/btn_no"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorTm"
+            android:hint="手动上架"
+            tools:ignore="ButtonStyle"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#D0D0D0"/>
+
+        <Button
+            android:id="@+id/btn_yes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorTm"
+            android:text="确认"
+            android:textColor="@color/colorMain"
+            tools:ignore="ButtonStyle"/>
+
+    </LinearLayout>
+
+</LinearLayout>

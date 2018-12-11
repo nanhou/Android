@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFg"
+    tools:context=".activities.product.creategoods.ChooseTypesActivity"
+    tools:ignore="HardcodedText">
+
+    <include
+        android:id="@+id/view_top"
+        layout="@layout/common_my_toolbar"/>
+
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:elevation="5dp"
+        android:gravity="center"
+        android:hint="当前分类"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_type0"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/rv_type1"
+        app:layout_constraintTop_toBottomOf="@id/tv_show"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:background="@color/white"
+        android:id="@+id/rv_type1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="3dp"
+        android:elevation="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/rv_type0"
+        app:layout_constraintRight_toLeftOf="@id/rv_type2"
+        app:layout_constraintTop_toBottomOf="@id/tv_show"
+        />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_type2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/rv_type1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_show"
+        />
+
+</android.support.constraint.ConstraintLayout>

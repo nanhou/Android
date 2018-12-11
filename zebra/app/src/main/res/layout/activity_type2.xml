@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFg"
+    android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".activities.product.types.Type2Activity"
+    tools:ignore="HardcodedText">
+
+    <include layout="@layout/common_my_toolbar"/>
+
+    <LinearLayout
+        android:id="@+id/ll_father_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="15dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/include_type1"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_father_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/into0"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:hint="请选择"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@color/white"
+        android:hint="二级分类名"
+        android:inputType="text"
+        android:padding="15dp"
+        android:singleLine="true"
+        />
+
+    <View
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/btn_delete"
+        android:text="删除"
+        android:textColor="@color/colorRed"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

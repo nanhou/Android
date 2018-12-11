@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.me.notifications.NotificationInfoActivity"
+    tools:ignore="HardcodedText">
+
+    <include
+        android:id="@+id/view_top"
+        layout="@layout/common_my_toolbar"/>
+
+    <TextView
+        android:id="@+id/tv_notification_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/qb_px_15"
+        android:text="标题"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top"
+        />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/qb_px_15"
+        android:paddingStart="@dimen/qb_px_15"
+        android:text="time"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_notification_title"/>
+
+    <View
+        android:id="@+id/view_fg"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/qb_px_1"
+        android:layout_margin="15dp"
+        android:background="@color/color_f6"
+        app:layout_constraintTop_toBottomOf="@id/tv_time"/>
+
+    <ScrollView
+        android:padding="@dimen/qb_px_15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_fg">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="message"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

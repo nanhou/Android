@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="1dp"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:id="@+id/tv_start_time"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="开始时刻"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:gravity="center"
+        android:text="至"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_end_time"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="结束时刻"
+        android:textColor="@color/black"
+        />
+
+    <View
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"/>
+
+    <TextView
+        android:id="@+id/tv_delete"
+        android:textColor="@color/colorRed"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:gravity="center"
+        android:text="移除"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"/>
+
+</LinearLayout>

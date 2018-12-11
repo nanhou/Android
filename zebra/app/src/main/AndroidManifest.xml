@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="cn.jinxiit.zebra">
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name=".MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/logo_zebra"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:screenOrientation="portrait"
+        android:theme="@style/AppTheme">
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.jinxiit.zebra.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 指定Uri的共享路径 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+
+        </provider>
+
+        <meta-data android:name="android.max_aspect" android:value="2.4" />
+
+        <activity android:name=".activities.MainActivity">
+        </activity>
+        <activity android:name=".activities.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.product.SearchActivity">
+        </activity>
+        <activity android:name=".activities.product.GoodsTypesActivity">
+        </activity>
+        <activity android:name=".activities.product.GoodsInfoActivity">
+        </activity>
+        <activity android:name=".activities.product.types.Type1Activity">
+        </activity>
+        <activity android:name=".activities.product.types.Type2Activity">
+        </activity>
+        <activity android:name=".activities.logins.LoginActivity">
+        </activity>
+        <activity android:name=".activities.me.StoresActivity">
+        </activity>
+        <activity android:name=".activities.me.CreateStoreActivity">
+        </activity>
+        <activity android:name=".activities.logins.SignupORResetpasswordActivity">
+        </activity>
+        <activity android:name=".activities.sta.AnalysisBusinessActivity">
+        </activity>
+        <activity android:name=".activities.sta.AnalysisTrafficActivity">
+        </activity>
+        <activity android:name=".activities.sta.AnalysisGoodsActivity">
+        </activity>
+        <activity android:name=".activities.sta.AnalysisCustomerActivity">
+        </activity>
+        <activity android:name=".activities.me.StoreInfoActivity">
+        </activity>
+        <activity android:name=".activities.me.BusinessStateActivity">
+        </activity>
+        <activity android:name=".activities.me.SettingStoreActivity">
+        </activity>
+        <activity android:name=".activities.me.SettingOrderActivity">
+        </activity>
+        <activity android:name=".activities.me.SettingPrinterActivity">
+        </activity>
+        <activity android:name=".activities.me.SettingRemidActivity">
+        </activity>
+        <activity android:name=".activities.me.SettingUserActivity">
+        </activity>
+        <activity android:name=".activities.me.accounts.UpdatePasswordActivity">
+        </activity>
+        <activity android:name=".activities.me.accounts.BindPhoneActivity">
+        </activity>
+        <activity android:name=".activities.me.NotificationActivity">
+        </activity>
+        <activity android:name=".activities.me.HelpAndFeedbackActivity">
+        </activity>
+        <activity android:name=".activities.me.ImageQualityActivity">
+        </activity>
+        <activity android:name=".activities.product.UpdateOrAddGoodsActivity">
+        </activity>
+        <activity android:name=".activities.me.storeupdate.StoreUpdateNameActivity">
+        </activity>
+        <activity android:name=".activities.product.creategoods.ChooseTypesActivity">
+        </activity>
+        <activity android:name=".activities.product.creategoods.AddSpecificationsActivity">
+        </activity>
+        <activity android:name=".activities.product.creategoods.AddAttrActivity">
+        </activity>
+        <activity android:name=".activities.product.creategoods.SellingTimeActivity">
+        </activity>
+        <activity android:name=".activities.product.creategoods.AnglesActivity">
+        </activity>
+        <activity android:name=".activities.product.batchadds.BatchCreateProductCategoryActivity">
+        </activity>
+        <activity android:name=".activities.product.BatchProductManageActivity">
+        </activity>
+        <activity android:name=".activities.product.UpdateInventoryPriceAllPlatformActivity">
+        </activity>
+        <activity android:name=".activities.product.AuditOfProductActivity">
+        </activity>
+        <activity android:name=".activities.product.ProductStatusActivity">
+        </activity>
+        <activity android:name=".activities.product.batchadds.CategoryOfProductListActivity">
+        </activity>
+        <activity android:name=".activities.product.batchadds.BatchCreateAllProductActivity">
+        </activity>
+        <activity android:name=".activities.me.storeupdate.PrinterListActivity">
+        </activity>
+        <activity android:name=".activities.me.AddPrinterActivity">
+        </activity>
+        <activity android:name=".activities.product.UpdateInventoryPriceOnePlatformActivity">
+        </activity>
+        <activity android:name=".activities.product.batchupdate.BatchUpdateStockActivity">
+        </activity>
+        <activity android:name=".activities.orders.OderOfDayActivity">
+        </activity>
+        <activity android:name=".activities.me.notifications.NotificationInfoActivity">
+        </activity>
+        <activity android:name=".activities.me.storeupdate.UpdateStoreTimeActivity">
+        </activity>
+        <activity android:name=".activities.codescanner.ScannerCodeActivity">
+        </activity>
+
+        <!--service-->
+        <service android:name=".RefreshHttpService">
+        </service>
+        <service android:name="net.posprinter.service.PosprinterService" />
+    </application>
+
+</manifest>

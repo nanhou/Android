@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFg"
+    tools:ignore="HardcodedText"
+    tools:context=".activities.me.SettingOrderActivity">
+
+    <include
+        android:id="@+id/ll_top0"
+        layout="@layout/common_my_toolbar" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_top0">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorFg">
+
+            <TextView
+                android:id="@+id/tv_setting_yu_order"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:layout_marginTop="20dp"
+                android:text="自动接单"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/tv_pay_status"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:hint="自动接单功能需连接至WIFI打印机方可开启，连接至打印机后自动接单打印并分配拣货人员。"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_setting_yu_order" />
+
+            <TextView
+                android:id="@+id/textview1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:text="本店铺自动接单"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@id/sb_order"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/sb_order"
+                app:layout_constraintTop_toBottomOf="@id/tv_pay_status" />
+
+            <com.kyleduo.switchbutton.SwitchButton
+                android:id="@+id/sb_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:checked="false"
+                android:gravity="end"
+                android:paddingBottom="5dp"
+                android:paddingEnd="10dp"
+                android:paddingTop="5dp"
+                android:textColor="@color/switchbtn_text"
+                app:kswAnimationDuration="300"
+                app:kswBackDrawable="@drawable/ios_back_drawable"
+                app:kswTextAdjust="-5dp"
+                app:kswTextExtra="10dp"
+                app:kswThumbDrawable="@drawable/ios_thumb_selector"
+                app:kswThumbMarginBottom="-8dp"
+                app:kswThumbMarginLeft="-5dp"
+                app:kswThumbMarginRight="-5dp"
+                app:kswThumbMarginTop="-2.5dp"
+                app:kswThumbRangeRatio="1.4"
+                app:layout_constraintLeft_toRightOf="@id/textview1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@id/textview1"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/textview2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                android:text="接单保障"
+                android:textColor="@color/black"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textview1" />
+
+            <TextView
+                android:id="@+id/textview3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:hint="建议开启或阅读一下信息，提前做好设置，避免漏单：\n\n1.请保证打印机不缺纸\n2.请将APP在前台运行\n3.请勿将设备锁屏导致应用被后台中断无法自动接单"
+                android:padding="10dp"
+                android:paddingStart="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textview2" />
+
+            <LinearLayout
+                android:id="@+id/ll_check_permission"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textview3">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="检查通知权限"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_check_permission"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/into0"
+                    android:drawablePadding="5dp"
+                    android:hint="未开启"
+                    android:textColorHint="@color/red" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_connect_printer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_check_permission">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="连接打印机"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_connect_printer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/into0"
+                    android:drawablePadding="5dp"
+                    android:hint="未连接"
+                    android:textColorHint="@color/red" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_setting_screen"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="15dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_connect_printer">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="设置不自动锁屏"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tv_setting_screen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/into0"
+                    android:drawablePadding="5dp"
+                    android:hint="已开启"
+                    />
+
+            </LinearLayout>
+
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
+
+</android.support.constraint.ConstraintLayout>

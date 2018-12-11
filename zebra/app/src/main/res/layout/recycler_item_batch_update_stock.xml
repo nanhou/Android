@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="15dp"
+    tools:ignore="LabelFor,HardcodedText,ContentDescription">
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/img_default"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="name"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_img"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_product_no"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:hint="商品编号"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"/>
+
+    <TextView
+        android:id="@+id/tv_stock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="当前库存：2233"
+        android:textColor="@color/colorRed"
+        app:layout_constraintBottom_toBottomOf="@id/iv_img"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/ll_jd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_stock">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="京东到家"/>
+
+        <TextView
+            android:id="@+id/tv_jd_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:padding="8dp"
+            android:text="沽清"
+            android:textColor="@color/colorMain"/>
+
+        <EditText
+            android:id="@+id/et_stock_jd"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:text="0"
+            />
+
+        <TextView
+            android:id="@+id/tv_jd_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:padding="8dp"
+            android:text="置满"
+            android:textColor="@color/colorMain"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_mt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_jd">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="美团"/>
+
+        <TextView
+            android:id="@+id/tv_mt_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:padding="8dp"
+            android:text="沽清"
+            android:textColor="@color/colorMain"/>
+
+        <EditText
+            android:id="@+id/et_stock_mt"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:text="0"
+            />
+
+        <TextView
+            android:id="@+id/tv_mt_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:padding="8dp"
+            android:text="置满"
+            android:textColor="@color/colorMain"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_eleme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_mt">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="饿了么"/>
+
+        <TextView
+            android:id="@+id/tv_eleme_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:padding="8dp"
+            android:text="沽清"
+            android:textColor="@color/colorMain"/>
+
+        <EditText
+            android:id="@+id/et_stock_eleme"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:text="0"
+            />
+
+        <TextView
+            android:id="@+id/tv_eleme_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:padding="8dp"
+            android:text="置满"
+            android:textColor="@color/colorMain"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ebai"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_eleme">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="饿百"/>
+
+        <TextView
+            android:id="@+id/tv_ebai_min"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:padding="8dp"
+            android:text="沽清"
+            android:textColor="@color/colorMain"/>
+
+        <EditText
+            android:id="@+id/et_stock_ebai"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="3"
+            android:text="0"
+            />
+
+        <TextView
+            android:id="@+id/tv_ebai_max"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:padding="8dp"
+            android:text="置满"
+            android:textColor="@color/colorMain"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

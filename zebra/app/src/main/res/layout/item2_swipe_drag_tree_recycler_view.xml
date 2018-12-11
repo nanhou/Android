@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/colorFg"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:orientation="horizontal"
+                tools:ignore="ContentDescription,RelativeOverlap">
+
+    <TextView
+        android:id="@+id/item2_sdtrv_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="60dp"
+        android:textSize="14sp"
+        tools:text="TextView"
+        />
+
+    <Button
+        android:id="@+id/btn_tuo"
+        android:layout_width="@dimen/qb_px_60"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end|center_vertical"
+        android:background="@color/colorTm"
+        android:text="@string/edit"
+        android:textColor="@color/colorMain"/>
+
+    <ImageView
+        android:id="@+id/btn_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@id/btn_tuo"
+        android:padding="10dp"
+        android:src="@drawable/category_sort"
+        />
+
+</RelativeLayout>

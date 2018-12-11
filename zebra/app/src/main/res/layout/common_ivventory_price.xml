@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:background="@color/white"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="10dp"
+    tools:ignore="KeyboardInaccessibleWidget,ContentDescription,HardcodedText">
+
+    <ImageView
+        android:layout_marginStart="@dimen/qb_px_3"
+        android:id="@+id/iv_img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:padding="5dp"
+        android:src="@drawable/img_default"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:layout_marginStart="@dimen/qb_px_3"
+        android:visibility="gone"
+        android:id="@+id/tv_pay_status"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/color_700"
+        android:gravity="center"
+        android:text="已下架"
+        android:textColor="@color/white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/tag_jd"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="name"
+        android:textColor="@color/black"
+        android:textSize="17sp"
+        app:layout_constraintLeft_toRightOf="@id/iv_img"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tv_product_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:hint="商品编码:2323341231"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_name"/>
+
+    <TextView
+        android:textSize="12sp"
+        android:id="@+id/tv_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/qb_px_15"
+        android:text="售价: ¥ 5.72"
+        android:textColor="@color/colorRed"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintTop_toBottomOf="@id/tv_product_no"/>
+
+    <TextView
+        android:id="@+id/tv_chengben"
+        android:visibility="gone"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toRightOf="@id/tv_price"
+        app:layout_constraintTop_toTopOf="@id/tv_price"
+        android:hint=" /成本: ¥20.9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tv_stock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="当前库存:232"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/tv_price"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_update_status"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="设置下架"
+        android:textColor="@color/white"
+        android:background="@drawable/shape_corners6_colormain"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintTop_toTopOf="@id/ll_update_price"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/iv_img"
+        app:layout_constraintRight_toRightOf="@id/iv_img"/>
+
+    <LinearLayout
+        android:id="@+id/ll_update_price"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/tv_price"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_price">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="修改售价"/>
+
+        <Button
+            android:id="@+id/btn_jian_price"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:text="-"
+            android:textColor="@color/colorMain"/>
+
+        <EditText
+            android:id="@+id/et_price"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTm"
+            android:gravity="center"
+            android:hint="售价"
+            android:inputType="number|numberDecimal"
+            android:padding="5dp"
+            android:text="0.00"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btn_jia_price"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:text="+"
+            android:textColor="@color/colorMain"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_update_stock"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/tv_price"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_update_price">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="修改库存"/>
+
+        <Button
+            android:id="@+id/btn_clear_stock"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:text="沽清"
+            android:textColor="@color/colorMain"/>
+
+        <EditText
+            android:id="@+id/et_stock"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTm"
+            android:gravity="center"
+            android:hint="库存"
+            android:inputType="number"
+            android:padding="5dp"
+            android:text="0"
+            android:textSize="14sp"
+            />
+
+        <Button
+            android:id="@+id/btn_max_stock"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:text="置满"
+            android:textColor="@color/colorMain"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/ll_update_jinjia"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        app:layout_constraintLeft_toLeftOf="@id/tv_price"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_update_stock">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="修改进价"/>
+
+        <Button
+            android:id="@+id/btn_jian_jinjia"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:text="-"
+            android:textColor="@color/colorMain"/>
+
+        <EditText
+            android:id="@+id/et_jinjia"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:background="@color/colorTm"
+            android:gravity="center"
+            android:hint="进价"
+            android:inputType="number|numberDecimal"
+            android:padding="5dp"
+            android:text="0.00"
+            android:textSize="14sp"/>
+
+        <Button
+            android:id="@+id/btn_jia_jinjia"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:background="@drawable/shape_corners6_colorfg"
+            android:text="+"
+            android:textColor="@color/colorMain"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_cannot_update"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="未绑定改平台不能修改"
+        android:textColor="@color/colorRed"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/tv_name"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_price"
+        />
+
+</android.support.constraint.ConstraintLayout>

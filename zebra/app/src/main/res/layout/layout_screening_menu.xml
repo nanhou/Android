@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:ignore="ButtonStyle,HardcodedText,UselessParent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:text="库存状态"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/radiogroup0"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb00"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio1"
+                android:button="@null"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="有货"
+                android:textColor="@color/selector_radio_text1"
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/rb01"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio1"
+                android:button="@null"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="无货"
+                android:textColor="@color/selector_radio_text1"
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/rb02"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio1"
+                android:button="@null"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="库存紧张"
+                android:textColor="@color/selector_radio_text1"
+                android:textSize="12sp"
+                />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="商品状态"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <RadioGroup
+            android:id="@+id/radiogroup1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb10"
+                android:layout_width="66.6dp"
+                android:layout_height="30dp"
+                android:background="@drawable/selector_radio1"
+                android:button="@null"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="已上架"
+                android:textColor="@color/selector_radio_text1"
+                android:textSize="12sp"
+                />
+
+            <RadioButton
+                android:id="@+id/rb11"
+                android:layout_width="66.6dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/selector_radio1"
+                android:button="@null"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="已下架"
+                android:textColor="@color/selector_radio_text1"
+                android:textSize="12sp"
+                />
+
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="在售平台"
+            android:textColor="@color/black"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center_vertical"
+            >
+
+            <CheckBox
+                android:id="@+id/cb_jd"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio1"
+                android:button="@null"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="京东到家"
+                android:textColor="@color/selector_radio_text1"
+                android:textSize="12sp"
+                />
+
+            <CheckBox
+                android:id="@+id/cb_mt"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio1"
+                android:button="@null"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="美团"
+                android:textColor="@color/selector_radio_text1"
+                android:textSize="12sp"
+                />
+
+            <CheckBox
+                android:id="@+id/cb_elm"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/selector_radio1"
+                android:button="@null"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="饿了么"
+                android:textColor="@color/selector_radio_text1"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginStart="15dp"
+            android:gravity="center_vertical"
+            >
+
+            <CheckBox
+                android:id="@+id/cb_ebai"
+                android:layout_width="66.6dp"
+                android:layout_height="30dp"
+                android:background="@drawable/selector_radio1"
+                android:button="@null"
+                android:elevation="5dp"
+                android:gravity="center"
+                android:text="饿百"
+                android:textColor="@color/selector_radio_text1"
+                android:textSize="12sp"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_reset"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorFg"
+                android:text="重置"
+                />
+
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorMain"
+                android:text="确定"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

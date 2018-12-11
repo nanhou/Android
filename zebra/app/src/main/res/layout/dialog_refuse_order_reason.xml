@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="match_parent"
+              android:focusable="true"
+              android:focusableInTouchMode="true"
+              android:orientation="vertical"
+              tools:ignore="ButtonStyle,HardcodedText,UselessParent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorFg"
+        android:orientation="vertical"
+        >
+
+        <RelativeLayout
+            style="@style/MyToolBar"
+            android:elevation="5dp"
+            >
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:contentDescription="@string/back"
+                android:paddingEnd="15dp"
+                android:paddingStart="15dp"
+                android:src="@drawable/back"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="60dp"
+                android:layout_marginStart="60dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="拒绝理由"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                />
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/qb_px_15">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioGroup
+                    android:id="@+id/rg_reason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/rb0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:drawableEnd="@drawable/selector_batch_sele"
+                        android:padding="@dimen/qb_px_15"
+                        android:text="抱歉，该商品已备货"/>
+
+                    <RadioButton
+                        android:id="@+id/rb1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/qb_px_1"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:drawableEnd="@drawable/selector_batch_sele"
+                        android:padding="@dimen/qb_px_15"
+                        android:text="商品已送出，不支持取消"/>
+
+                    <RadioButton
+                        android:id="@+id/rb2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/qb_px_1"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:drawableEnd="@drawable/selector_batch_sele"
+                        android:padding="@dimen/qb_px_15"
+                        android:text="亲，生鲜产品已处理好不支持取消哦"/>
+
+                    <RadioButton
+                        android:id="@+id/rb3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/qb_px_1"
+                        android:background="@color/white"
+                        android:button="@null"
+                        android:drawableEnd="@drawable/selector_batch_sele"
+                        android:padding="@dimen/qb_px_15"
+                        android:text="亲，马上给您安排，请耐心等待一会"/>
+
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/qb_px_200"
+                    android:layout_marginTop="@dimen/qb_px_15"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/qb_px_15">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="其他理由"/>
+
+                    <EditText
+                        android:id="@+id/et_reason"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="@dimen/qb_px_10"
+                        android:background="@color/colorFg"
+                        android:gravity="start"
+                        android:hint="或者请输入其他拒绝理由"
+                        android:inputType="text"
+                        android:padding="@dimen/qb_px_3"/>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/qb_px_50"
+                    android:layout_marginTop="@dimen/qb_px_15"
+                    android:background="@color/colorMain"
+                    android:text="确认拒绝"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>

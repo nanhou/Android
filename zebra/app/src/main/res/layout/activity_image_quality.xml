@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorFg"
+    tools:context=".activities.me.ImageQualityActivity">
+
+    <include
+        android:id="@+id/ll_top0"
+        layout="@layout/common_my_toolbar" />
+
+    <RadioGroup
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_top0">
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/rb0"
+            android:button="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:drawableRight="@drawable/selecor_right"
+            android:text="高质量" />
+
+        <RadioButton
+            android:id="@+id/rb1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:button="@null"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:drawableRight="@drawable/selecor_right"
+            android:text="中质量（默认）" />
+
+        <RadioButton
+            android:id="@+id/rb2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:button="@null"
+            android:background="@color/white"
+            android:padding="15dp"
+            android:drawableRight="@drawable/selecor_right"
+            android:text="无图模式" />
+
+    </RadioGroup>
+
+</android.support.constraint.ConstraintLayout>

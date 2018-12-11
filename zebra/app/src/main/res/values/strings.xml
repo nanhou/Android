@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">斑马鲜生</string>
+
+    <string name="rb_first">首页</string>
+
+    <string name="defalut">默认信息</string>
+    <string name="hello">hello</string>
+    <string name="cancel">取消</string>
+    <string name="back">返回</string>
+    <string name="search">搜索</string>
+    <string name="search_info">搜索内容</string>
+    <string name="show_image">显示图片</string>
+    <string name="update_price_inventory">修改库存价格</string>
+    <string name="set_the_shelves">设置上架</string>
+    <string name="title">标题</string>
+    <string name="menu">菜单</string>
+    <string name="create_new_types">新建分类</string>
+    <string name="edit">编辑</string>
+
+    <string name="fenlie">分类名</string>
+    <string name="fenliemiaoshu">分类描述</string>
+    <string name="include_type1">所属一级分类</string>
+
+    <string name="goods_mingchen">商品名称</string>
+    <string name="goods_bianma">商品编码</string>
+    <string name="goods_liemu">商品类目</string>
+    <string name="goods_pinpai">商品品牌</string>
+    <string name="goods_upc">UPC</string>
+    <string name="goods_maozhong">商品毛重</string>
+
+    <string name="username">用户名</string>
+    <string name="password">密码</string>
+    <string name="sign_up">注册</string>
+    <string name="title_activity_login2">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_phone">Phone</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+
+    <string name="toptitle_yesterday">昨天</string>
+    <string name="toptitle_hebdomad">近七天</string>
+    <string name="toptitle_month">近30天</string>
+    <string name="toptitle_userdefined">自定义</string>
+
+    <string name="welcome">欢迎回来</string>
+
+    <string name="to_be_the_input">待输入</string>
+    <string name="to_choose">待选择</string>
+
+</resources>
